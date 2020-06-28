@@ -1,0 +1,40 @@
+div.menu_div{
+	background-color:#f0f0f0;
+	padding-bottom: 10px;
+	width: 1500px;
+	margin: auto;
+	font-family: cursive ,sans-serif;
+}
+div.logo{
+	float: left;
+	margin-left: 40px;
+}
+div.user_info{
+	float: right;
+	max-width: 350px;
+	font-size: 14px;
+	font-family: sans-serif;
+	margin-top: 20px;
+}
+table tr td span{
+	text-decoration: none;
+	color:brown;
+}
+div.menu_bar{
+	clear: both;
+	padding-left: 40px;
+}
+div.logo h1{
+	font-size: 30px;
+	color: #3902ff;
+}
+div.logo h1 span{
+	font-size: 40px;
+	color:red;
+}
+.menu_head {
+	font-size:20px;
+	text-decoration: none;
+	font-weight: bold;
+	color: crimson;
+}

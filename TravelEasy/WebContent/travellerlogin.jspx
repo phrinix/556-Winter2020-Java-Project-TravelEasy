@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Do Gia Huy Pham -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="travellerlogin.css" type="text/css" />
+<title>Travel Login</title>
+</head>
+<body>
+<h1><span class="travel">Travel</span><span class="easy">Easy</span></h1>
+<fieldset>
+	<legend>Sign In</legend>
+	<form action="travellerlogin.jspx" method="post">
+		<table>
+			<tr>
+				<td><span id="name">User Name: </span></td>
+				<td><input type="text" name="username" value="${username}" tabindex="1"/></td>
+			</tr>
+			<tr>
+				<td><span id="password">Password: </span></td>
+				<td><input type="password" name="password" tabindex="2" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="login" value="Login"/></td><td></td>
+			</tr>
+		</table>
+	</form>
+</fieldset>
+<c:choose>
+	<c:when test="${unsuccessfulLogin}"><p id="fail" >User Name/Password Invalid</p></c:when>
+	<c:otherwise><p id="success">Welcome to Travel Easy.</p></c:otherwise>
+</c:choose>
+
+
+
+</body>
+</html>
+</jsp:root>

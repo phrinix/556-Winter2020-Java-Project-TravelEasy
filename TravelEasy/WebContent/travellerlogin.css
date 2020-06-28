@@ -1,0 +1,19 @@
+body {
+	font-size: 30px;
+	font-family: cursive ,sans-serif;
+	background-color: aliceblue;
+}
+h1 span.travel{
+	font-size: 30px;
+	color: #3902ff;
+}
+h1 span.easy{
+	font-size: 40px;
+	color:red;
+}
+legend {
+	color: crimson;
+}
+table {
+	width: 90;
+}

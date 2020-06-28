@@ -1,0 +1,22 @@
+body{
+	font-family: sans-serif,serif;
+	background-color: aliceblue;
+}
+
+#none {
+	color:red;
+	font-size: 20px;
+	margin: 10px auto;
+	width: 600px;
+}
+
+.content{
+	width: 1500px;
+	margin: auto;
+	padding-left: 40px;
+	padding-top: 10px;
+}
+table.property_info{
+	width: 400px;
+	padding: 15px;
+}

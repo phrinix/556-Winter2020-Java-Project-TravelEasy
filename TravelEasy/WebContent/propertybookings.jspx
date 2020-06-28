@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Do Gia Huy Pham -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	version="2.0">
+    <jsp:directive.page language="java"
+        contentType="application/xhtml+xml; charset=UTF-8" pageEncoding="UTF-8" />
+    <jsp:output omit-xml-declaration="no"
+        doctype-root-element="html"
+        doctype-public="-//W3C//DTD XHTML 1.1//EN"
+        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="trepramenu.css" type="text/css" />
+<link rel="stylesheet" href="propertybookings.css" type="text/css" />
+<title>Property Bookings</title>
+</head>
+<body>
+<jsp:include page="trepramenu.jspx" />
+<div class="content">
+<c:choose>
+	<c:when test="${empty PropertyBookings}">
+		<p id="none">You currently have no travel rental property bookings</p>
+	</c:when>
+	<c:otherwise>
+		<form action="propertybookings.jspx" method="post">
+			<table class="property_info">
+			<c:forEach var="list" items="${PropertyBookings}">
+				<tr>
+					<td>Address:</td><td>${list.address}</td>
+				</tr>
+				<tr>
+					<td>Number of bedrooms:</td><td>${list.numberOfBedrooms}</td>
+				</tr>
+				<tr>
+					<td>Arrival date:</td><td><fmt:formatDate type="date" dateStyle="medium" value="${list.arrivalDate}" /></td>
+				</tr>
+				<tr>
+					<td>Departure date:</td><td><fmt:formatDate type="date" dateStyle="medium" value="${list.departureDate}" /></td> 
+				</tr>	
+				<tr>
+					<td><input type="submit" name="cancel" value="Cancel Booking" />
+    				<input type="hidden" name="BookingCode" value ="${list.bookingCode}" /></td>
+				</tr>
+			</c:forEach>
+			</table>
+		</form>
+	</c:otherwise>
+</c:choose>
+</div>
+</body>
+</html>
+</jsp:root>
